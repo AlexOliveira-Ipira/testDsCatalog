@@ -24,7 +24,7 @@ public class Account {
         return balance;
     }
 
-    public void daposit(double amount) {
+    public void deposit(double amount) {
         if (amount > 0) {
             amount -= amount * DEPOSIT_FEE_PRECENTAGE;
             balance += amount;

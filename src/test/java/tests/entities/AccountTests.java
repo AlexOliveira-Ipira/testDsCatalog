@@ -10,10 +10,20 @@ public class AccountTests {
         double amount = 200.0;
         double expectedValue = 196.0;
         Account acc = new Account(1L, 0.0);
-        acc.daposit(amount);
+        acc.deposit(amount);
         Assertions.assertEquals(expectedValue , acc.getBalance());
     }
+    @Test
+    public void depositShouldDoNothingWhenNegativeAmount(){
 
+        double expectedValue = 100.00;
+        Account acc = new Account(1L, 100.0);
+        double amount = -200.0;
+
+        acc.deposit(amount);
+        Assertions.assertEquals(expectedValue, acc.getBalance());
+
+    }
 
 
 
