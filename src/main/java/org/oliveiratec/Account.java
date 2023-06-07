@@ -30,10 +30,11 @@ public class Account {
             balance += amount;
         }
     }
-    public void  withdraw(double amount){
-        if(amount <= balance){
-            balance -= amount;
+    public void  withdraw(double amount) throws IllegalAccessException {
+        if(amount > balance){
+            throw new IllegalAccessException();
         }
+        balance -= amount;
     }
 
     public double fullWithdraw(){
